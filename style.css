@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  user-select: none;
+}
+body{
+  font-family: Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main{
+  position: relative;
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 2s;
+}
+.main label{
+  position: fixed;
+  z-index: 1;
+  cursor: pointer;
+  color: white;
+  background: #4cbaff;
+  padding: 30px 10px 30px 10px;
+  margin: auto;
+  border-radius: 50%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: .4s;
+}
+.main label:hover{
+  background-color: black;
+}
+.main span{
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  width: 45px; height: 45px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 45px;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 4s;
+}
+input{
+  display: none;
+}
+input:checked ~ .main span{
+  opacity: 1;
+  pointer-events: visible;
+}
+input:checked ~ .main{
+  width: 360px; height: 360px;
+  animation: rotate 4s;
+}
+@keyframes rotate{
+  50%, 100%{transform: rotate(720deg);}
+}
+.fa-instagram{
+  top: 0;
+  background-color: tomato;
+}
+.fa-twitter{
+  top: 46px; right: 46px;
+  background-color: #55acee;
+}
+.fa-facebook-f{
+  right: 0px;
+  background-color: #3b5999;
+}
+.fa-telegram{
+  right: 48px;
+  bottom: 46px;
+  background-color: #0088cc;
+}
+.fa-youtube{
+  bottom: 0px;
+  background-color: red;
+}
+.fa-github{
+  bottom: 46px; left: 46px;
+  background-color: #Ad5c51;
+}
+.fa-google{
+  left: 0;
+  background-color: #c70039;
+}
+.fa-envelope{
+  left: 48px;
+  top: 46px;
+  background-color: #f1b592;
+}
+
+
+
+
